@@ -34,8 +34,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-4">
             <a href="/" className="flex items-center space-x-2">
                 {/* <Waves className="h-8 w-8 text-calm-seas animate-wave" /> */}
-                <img src='/thalasso_logo_02_small_nobg.png' alt='Thalasso Logo' width={30} height={30} className="object-contain" />
-                <img src="/thalasso_logo_nobg_gmysie.png" alt="Thalasso Name" width={150} height={100} className="object-contain" />
+                <img src='/thalasso_logo_02_small_nobg2.png' alt='Thalasso Logo' width={30} height={30} className="object-contain" />
+                <img src="/thalasso_logo_nobg_gmysie2.png" alt="Thalasso Name" width={150} height={100} className="object-contain" />
                 {/* <span className="text-2xl font-bold bg-ocean-gradient bg-clip-text text-transparent">Thalasso</span> */}
               </a>
             </div>
