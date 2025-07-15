@@ -32,10 +32,12 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-sand rounded-lg p-2">
-                <Code2 className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-2xl font-semibold">Thalasso.dev</span>
+            <a href="/" className="flex items-center space-x-2">
+                {/* <Waves className="h-8 w-8 text-calm-seas animate-wave" /> */}
+                <img src='/thalasso_logo_02_small_nobg.png' alt='Thalasso Logo' width={30} height={30} className="object-contain" />
+                <img src="/thalasso_logo_nobg_gmysie.png" alt="Thalasso Name" width={150} height={100} className="object-contain" />
+                {/* <span className="text-2xl font-bold bg-ocean-gradient bg-clip-text text-transparent">Thalasso</span> */}
+              </a>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
               We craft beautiful, scalable applications using modern technologies. 
