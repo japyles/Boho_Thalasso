@@ -8,8 +8,15 @@ const Hero: React.FC = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-sage/10 to-beige/30"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(208,164,125,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(180,193,184,0.1),transparent_50%)]"></div>
+      
+      {/* Manta Ray Background */}
+      <div className="absolute inset-x-0 bottom-0 top-16 opacity-10 pointer-events-none flex items-center justify-center">
+        <img
+          src="/hammerhead_outline-nobg.png"
+          alt="Manta Ray Background"
+          className="w-[82%] h-[82%] object-contain"
+        />
+      </div>
       
       {/* Floating Tech Icons */}
       <div className="absolute top-20 left-10 w-16 h-16 bg-sand/10 rounded-full blur-xl animate-pulse"></div>
@@ -52,19 +59,19 @@ const Hero: React.FC = () => {
 
         {/* Tech Stack Preview */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
+          <div className="bg-white/60 backdrop-blur-sm shadow-lg rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
             <div className="text-sm font-semibold text-charcoal">React.js / Next.js</div>
             <div className="text-xs text-charcoal/60">Mobile First</div>
           </div>
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
+          <div className="bg-white/60 backdrop-blur-sm shadow-lg rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
             <div className="text-sm font-semibold text-charcoal">Supabase / PostgeSQL</div>
             <div className="text-xs text-charcoal/60">Backend</div>
           </div>
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
+          <div className="bg-white/60 backdrop-blur-sm shadow-lg rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
             <div className="text-sm font-semibold text-charcoal">Tailwind / NativeWind</div>
             <div className="text-xs text-charcoal/60">Universal CSS</div>
           </div>
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
+          <div className="bg-white/60 backdrop-blur-sm shadow-lg rounded-xl p-4 text-center hover:bg-white/80 transition-all duration-300">
             <div className="text-sm font-semibold text-charcoal">TypeScript</div>
             <div className="text-xs text-charcoal/60">Type Safe</div>
           </div>
