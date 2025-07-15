@@ -6,16 +6,34 @@ import { ArrowRight, Smartphone, Globe, Database } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-sage/10 to-beige/30"></div>
+      {/* Background Image and Overlay */}
+      <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")' }}></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-[#f8f4f1]/80 to-[#f3e6d8]/70"></div>
       
-      {/* Manta Ray Background */}
-      <div className="hidden absolute inset-x-0 bottom-0 top-16 pointer-events-none flex items-center justify-center">
-        <img
-          src="/hammerhead_outline-nobg.png"
-          alt="Hammerhead Background"
-          className="w-[82%] h-[82%] object-contain animate-flicker"
-        />
+      {/* Main Boho Beach Image */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative w-full h-full max-w-7xl mx-auto">
+          <img
+            src="/images/palm_minimal_outline.svg"
+            alt="Minimal Palm Outline"
+            className="absolute left-0 top-1/4 w-1/3 opacity-10"
+          />
+          {/* <img
+            src="/images/wave_line_art.svg"
+            alt="Wave Line Art"
+            className="absolute left-80 bottom-32 w-[600px] opacity-20 transform scale-125"
+          /> */}
+          <img
+            src="/images/mandala_sun.svg"
+            alt="Mandala Sun"
+            className="absolute top-1 left-1/2 transform -translate-x-1/2 w-1/4 opacity-8 animate-pulse"
+          />
+          <img
+            src="/images/palm_minimal_outline.svg"
+            alt="Minimal Palm Outline"
+            className="absolute right-0 top-1/4 w-1/3 opacity-10"
+          />
+        </div>
       </div>
       
       {/* Floating Tech Icons */}
@@ -25,11 +43,11 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-8 flex justify-center space-x-4">
-        <img
+        {/* <img
           src="/hammerhead_outline-nobg.png"
           alt="Hammerhead Background"
           className="w-[51%] h-[51%] object-contain animate-flicker"
-        />
+        /> */}
       </div>
         {/* <div className="mb-8 flex justify-center space-x-4">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">

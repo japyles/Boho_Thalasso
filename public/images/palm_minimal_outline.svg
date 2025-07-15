@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="600" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M200 500 C200 500 200 200 200 100
+           M200 400 C200 400 150 300 100 250
+           M200 350 C200 350 170 270 130 230
+           M200 300 C200 300 190 240 160 210
+           M200 400 C200 400 250 300 300 250
+           M200 350 C200 350 230 270 270 230
+           M200 300 C200 300 210 240 240 210"
+        stroke="#977c5f" 
+        stroke-width="2"
+        stroke-linecap="round"
+        fill="none"/>
+</svg>
