@@ -10,11 +10,11 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-sage/10 to-beige/30"></div>
       
       {/* Manta Ray Background */}
-      <div className="absolute inset-x-0 bottom-0 top-16 opacity-10 pointer-events-none flex items-center justify-center">
+      <div className="hidden absolute inset-x-0 bottom-0 top-16 pointer-events-none flex items-center justify-center">
         <img
           src="/hammerhead_outline-nobg.png"
-          alt="Manta Ray Background"
-          className="w-[82%] h-[82%] object-contain"
+          alt="Hammerhead Background"
+          className="w-[82%] h-[82%] object-contain animate-flicker"
         />
       </div>
       
@@ -24,7 +24,14 @@ const Hero: React.FC = () => {
       <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-mint/20 rounded-full blur-lg animate-bounce delay-500"></div>
 
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex justify-center space-x-4">
+      <div className="mb-8 flex justify-center space-x-4">
+        <img
+          src="/hammerhead_outline-nobg.png"
+          alt="Hammerhead Background"
+          className="w-[51%] h-[51%] object-contain animate-flicker"
+        />
+      </div>
+        {/* <div className="mb-8 flex justify-center space-x-4">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
             <Smartphone className="h-8 w-8 text-sand" />
           </div>
@@ -34,7 +41,7 @@ const Hero: React.FC = () => {
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300">
             <Database className="h-8 w-8 text-olive" />
           </div>
-        </div>
+        </div> */}
 
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light text-charcoal mb-6 leading-tight">
           Custom <span className="text-sand font-normal">Web</span> &

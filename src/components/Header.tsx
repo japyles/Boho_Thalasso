@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a
               href="#contact"
               className="bg-sand hover:bg-sand/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-charcoal hover:text-sand transition-colors duration-200"
+            className="lg:hidden text-charcoal hover:text-sand transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 py-4 shadow-lg">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 py-4 shadow-lg">
             {navItems.map((item) => (
               <a
                 key={item.name}
