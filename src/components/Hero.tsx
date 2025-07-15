@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           <img
             src="/images/mandala_sun.svg"
             alt="Mandala Sun"
-            className="absolute top-1 left-1/2 transform -translate-x-1/2 w-1/4 opacity-8 animate-pulse"
+            className="absolute top-1 right-1 transform -translate-x-1/2 w-1/2 opacity-8 animate-pulse"
           />
           <img
             src="/images/palm_minimal_outline.svg"
