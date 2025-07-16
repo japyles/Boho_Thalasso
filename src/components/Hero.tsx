@@ -12,6 +12,8 @@ const Hero: React.FC = () => {
       
       {/* Main Boho Beach Image */}
       <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0">
+      </div>
         <div className="relative w-full h-full max-w-7xl mx-auto">
           <img
             src="/images/palm_minimal_outline.svg"
