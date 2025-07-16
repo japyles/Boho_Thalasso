@@ -1,5 +1,10 @@
 import React from 'react';
-import { Users, Award, Code, Rocket } from 'lucide-react';
+import {
+  UserGroupIcon as Users,
+  TrophyIcon as Award,
+  CodeBracketIcon as Code,
+  RocketLaunchIcon as Rocket
+} from '@heroicons/react/24/outline';
 
 const About: React.FC = () => {
   const stats = [

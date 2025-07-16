@@ -1,5 +1,12 @@
 import React from 'react';
-import { Code2, Smartphone, Database, Palette, Zap, Shield } from 'lucide-react';
+import {
+  CodeBracketIcon as Code2,
+  DevicePhoneMobileIcon as Smartphone,
+  CircleStackIcon as Database,
+  SwatchIcon as Palette,
+  BoltIcon as Zap,
+  ShieldCheckIcon as Shield
+} from '@heroicons/react/24/outline';
 
 const TechStack: React.FC = () => {
   const technologies = [
@@ -101,7 +108,7 @@ const TechStack: React.FC = () => {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
               <div className={`w-14 h-14 rounded-xl ${getColorClasses(category.color)} flex items-center justify-center mb-6`}>
-                <category.icon size={20} />
+                <category.icon className="h-6 w-6" />
               </div>
               
               <h3 className="text-xl font-semibold text-charcoal mb-6">

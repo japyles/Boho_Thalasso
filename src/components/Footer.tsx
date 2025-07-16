@@ -1,12 +1,18 @@
 import React from 'react';
-import { Code2, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import {
+  CodeBracketIcon as Code2,
+  GlobeAltIcon,
+  DocumentIcon,
+  ChatBubbleLeftRightIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/thalasso-dev' },
-    // { icon: Linkedin, href: '#' },
-    // { icon: Twitter, href: '#' },
-    { icon: Instagram, href: 'https://instagram.com/thalasso.dev' }
+    { name: 'GitHub', href: 'https://github.com/thalasso-dev', icon: GlobeAltIcon },
+    { name: 'LinkedIn', href: 'https://linkedin.com', icon: UserGroupIcon },
+    { name: 'Twitter', href: 'https://twitter.com', icon: ChatBubbleLeftRightIcon },
+    { name: 'Instagram', href: 'https://www.instagram.com/thalasso.dev/', icon: DocumentIcon },
   ];
 
   const services = [

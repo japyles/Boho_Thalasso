@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -10,6 +14,8 @@ export default {
         beige: '#e8d7cd',
         olive: '#a3a598',
         charcoal: '#353a34',
+        'calm-seas': '#68B0AB',
+        'deep-ocean': '#3C7A89',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

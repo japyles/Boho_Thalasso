@@ -1,7 +1,12 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import {
+  PhoneIcon as Phone,
+  EnvelopeIcon as Mail,
+  MapPinIcon as MapPin,
+  PaperAirplaneIcon as Send
+} from '@heroicons/react/24/outline';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

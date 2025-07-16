@@ -1,5 +1,8 @@
+'use client'
+
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import Link from 'next/link';
+import { Bars3Icon as Menu, XMarkIcon as X, CodeBracketIcon as Code2 } from '@heroicons/react/24/outline';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,10 +10,16 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (typeof window !== 'undefined') {
+        setIsScrolled(window.scrollY > 20);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    if (typeof window !== 'undefined') {
+      handleScroll(); // Initial check
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const navItems = [
@@ -20,6 +29,15 @@ const Header: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
@@ -31,12 +49,13 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-2">
             <div className="rounded-lg p-2">
               {/* <Code2 className="h-6 w-6 text-white" /> */}
-              <a href="/" className="flex items-center space-x-2">
+              <Link
+                href="/" className="flex items-center space-x-2">
                 {/* <Waves className="h-8 w-8 text-calm-seas animate-wave" /> */}
                 <img src='/ThalassoLogo_SansThalasso2.png' alt='Thalasso Logo' width={30} height={30} className="object-contain" />
                 <img src="/thalasso_logo_nobg_gmysie.png" alt="Thalasso Name" width={150} height={100} className="object-contain" />
                 {/* <span className="text-2xl font-bold bg-ocean-gradient bg-clip-text text-transparent">Thalasso</span> */}
-              </a>
+              </Link>
             </div>
             {/* <span className="text-xl font-semibold text-charcoal">Thalasso.dev</span> */}
           </div>
@@ -48,6 +67,7 @@ const Header: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 className="text-charcoal hover:text-sand transition-colors duration-200 font-medium"
+                onClick={(e) => scrollToSection(e, item.href)}
               >
                 {item.name}
               </a>
@@ -59,6 +79,7 @@ const Header: React.FC = () => {
             <a
               href="#contact"
               className="bg-sand hover:bg-sand/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              onClick={(e) => scrollToSection(e, '#contact')}
             >
               Start Project
             </a>
@@ -69,7 +90,7 @@ const Header: React.FC = () => {
             className="lg:hidden text-charcoal hover:text-sand transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
@@ -77,20 +98,20 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 py-4 shadow-lg">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="block px-4 py-2 text-charcoal hover:text-sand hover:bg-beige/30 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="px-4 pt-2">
               <a
                 href="#contact"
                 className="block bg-sand hover:bg-sand/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 text-center"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => scrollToSection(e, '#contact')}
               >
                 Start Project
               </a>

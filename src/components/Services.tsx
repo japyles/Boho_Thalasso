@@ -1,5 +1,12 @@
 import React from 'react';
-import { Smartphone, Globe, Database, Palette, Zap, Shield } from 'lucide-react';
+import {
+  DevicePhoneMobileIcon as Smartphone,
+  GlobeAltIcon as Globe,
+  CircleStackIcon as Database,
+  SwatchIcon as Palette,
+  BoltIcon as Zap,
+  ShieldCheckIcon as Shield
+} from '@heroicons/react/24/outline';
 
 const Services: React.FC = () => {
   const services = [
@@ -77,7 +84,7 @@ const Services: React.FC = () => {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group border border-gray-100"
             >
               <div className={`w-16 h-16 rounded-2xl ${getColorClasses(service.color)} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon size={24} />
+                <service.icon className="h-6 w-6" />
               </div>
               
               <h3 className="text-xl font-semibold text-charcoal mb-3">

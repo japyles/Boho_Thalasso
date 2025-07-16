@@ -1,7 +1,13 @@
 'use client'
 
 import React from 'react';
-import { ArrowRight, Smartphone, Globe, Database } from 'lucide-react';
+import Image from 'next/image';
+import {
+  ArrowRightIcon as ArrowRight,
+  DevicePhoneMobileIcon as Smartphone,
+  GlobeAltIcon as Globe,
+  CircleStackIcon as Database
+} from '@heroicons/react/24/outline';
 
 const Hero: React.FC = () => {
   return (
@@ -15,25 +21,33 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0">
       </div>
         <div className="relative w-full h-full max-w-7xl mx-auto">
-          <img
+          <Image
             src="/images/palm_minimal_outline.svg"
             alt="Minimal Palm Outline"
             className="absolute left-0 top-1/4 w-1/3 opacity-10"
+            width={400}
+            height={400}
           />
-          {/* <img
+          {/* <Image
             src="/images/wave_line_art.svg"
             alt="Wave Line Art"
             className="absolute left-80 bottom-32 w-[600px] opacity-20 transform scale-125"
+            width={600}
+            height={200}
           /> */}
-          <img
+          <Image
             src="/images/mandala_sun.svg"
             alt="Mandala Sun"
             className="absolute top-1 right-40 w-1/2 opacity-8 animate-pulse"
+            width={600}
+            height={600}
           />
-          <img
+          <Image
             src="/images/palm_minimal_outline.svg"
             alt="Minimal Palm Outline"
             className="absolute right-0 top-1/4 w-1/3 opacity-10"
+            width={400}
+            height={400}
           />
         </div>
       </div>
@@ -45,10 +59,12 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-8 flex justify-center space-x-4">
-        {/* <img
+        {/* <Image
           src="/hammerhead_outline-nobg.png"
           alt="Hammerhead Background"
           className="w-[51%] h-[51%] object-contain animate-flicker"
+          width={510}
+          height={510}
         /> */}
       </div>
         {/* <div className="mb-8 flex justify-center space-x-4">
