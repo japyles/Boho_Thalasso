@@ -104,16 +104,14 @@ const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) =
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <button className="bg-sand hover:bg-sand/90 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2">
           <Link
-                href="#contact"
-                className="block bg-sand hover:bg-sand/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 text-center"
-                onClick={(e) => scrollToSection(e, '#contact')}
-              >
-                Start Project
-              </Link>
+            href="#contact"
+            className="bg-sand hover:bg-sand/90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2"
+            onClick={(e) => scrollToSection(e, '#contact')}
+          >
+            <span>Start Project</span>
             <ArrowRight className="h-5 w-5" />
-          </button>
+          </Link>
           <button className="border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white px-8 py-4 rounded-full font-medium transition-all duration-300">
             View Our Work
           </button>
