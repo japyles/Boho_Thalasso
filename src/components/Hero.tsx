@@ -1,7 +1,8 @@
 'use client'
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   ArrowRightIcon as ArrowRight,
   DevicePhoneMobileIcon as Smartphone,
@@ -10,6 +11,18 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Hero: React.FC = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Image and Overlay */}
@@ -91,8 +104,14 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <button className="bg-sand hover:bg-sand/90 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2">
-            <span>Start Your Project</span>
+          <button className="bg-sand hover:bg-sand/90 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2">
+          <Link
+                href="#contact"
+                className="block bg-sand hover:bg-sand/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 text-center"
+                onClick={(e) => scrollToSection(e, '#contact')}
+              >
+                Start Project
+              </Link>
             <ArrowRight className="h-5 w-5" />
           </button>
           <button className="border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white px-8 py-4 rounded-full font-medium transition-all duration-300">

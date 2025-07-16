@@ -108,13 +108,13 @@ const Header: React.FC = () => {
               </Link>
             ))}
             <div className="px-4 pt-2">
-              <a
+              <Link
                 href="#contact"
                 className="block bg-sand hover:bg-sand/90 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 text-center"
                 onClick={(e) => scrollToSection(e, '#contact')}
               >
                 Start Project
-              </a>
+              </Link>
             </div>
           </div>
         )}
